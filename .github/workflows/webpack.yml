@@ -1,0 +1,33 @@
+name: web-build-deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    env:
+      DEPLOY_DIR: /home/lyu/reverse-study-server/web
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Copy dist to deploy directory
+        run: |
+          mkdir -p "${DEPLOY_DIR}"
+          cp -R dist/. "${DEPLOY_DIR}/"

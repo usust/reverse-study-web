@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f4f6fb;
+  color: #1f2430;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1e2634;
+  color: #dbe3f2;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 10px 12px;
+  border: 1px solid #324159;
+  border-radius: 8px;
+}
+
+.menu-title {
+  font-size: 12px;
+  color: #95a7c2;
+  margin: 10px 0 8px;
+  padding: 0 12px;
+}
+
+.menu a {
+  display: block;
+  color: #dbe3f2;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.menu a:hover {
+  background: #2a3446;
+}
+
+.menu a.router-link-active {
+  background: #2f6fed;
+  color: #fff;
+}
+
+.menu-group {
+  margin-top: 8px;
+}
+
+.menu-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #95a7c2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-parent:hover {
+  background: #2a3446;
+}
+
+.menu-arrow {
+  font-size: 12px;
+}
+
+.menu-children {
+  margin-top: 4px;
+}
+
+.menu-sub {
+  margin-left: 12px;
+}
+
+.version-panel {
+  margin-top: auto;
+  padding: 12px;
+  border: 1px solid #324159;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.version-line {
+  color: #a8b6cb;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.main {
+  flex: 1;
+  padding: 16px;
+}
+
+.page-title {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e4e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.card h2 {
+  margin: 6px 0 12px;
+  font-size: 18px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.card-head h2 {
+  margin: 6px 0;
+}
+
+.card-head button {
+  width: auto;
+  min-width: 100px;
+}
+
+.card-head .btn-row {
+  margin-top: 0;
+}
+
+.card-head .btn-row button {
+  width: auto;
+  min-width: 100px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  min-width: 220px;
+}
+
+.field-small {
+  min-width: 120px;
+  max-width: 180px;
+}
+
+.field-full {
+  min-width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #4f5d75;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cad2df;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.prompt-editor {
+  min-height: 260px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  margin-top: 8px;
+  align-items: center;
+}
+
+button {
+  border: 0;
+  background: #1f6feb;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #5a6474;
+}
+
+button.warn {
+  background: #c52828;
+}
+
+.btn-row button {
+  width: auto;
+  min-width: 96px;
+  white-space: nowrap;
+}
+
+.empty-tip {
+  font-size: 14px;
+  color: #5f6f86;
+}
+
+.api-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.api-item {
+  position: relative;
+  border: 1px solid #dfe5f1;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fafcff;
+}
+
+.api-switch-corner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.api-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.api-line {
+  font-size: 13px;
+  color: #41506a;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.input-with-action {
+  display: flex;
+  gap: 8px;
+}
+
+.input-with-action input {
+  flex: 1;
+}
+
+.small-btn {
+  width: auto;
+  min-width: 68px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 14px;
+  vertical-align: bottom;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c6cedb;
+  transition: .2s;
+  border-radius: 14px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #1f6feb;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  border: 1px solid #e5e9f2;
+  padding: 8px;
+  text-align: left;
+  word-break: break-all;
+}
+
+.table-action-btn {
+  width: auto;
+  min-width: 48px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border: 1px solid #e4e8f0;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.modal-dialog h2 {
+  margin: 6px 0 12px;
+  font-size: 18px;
+}
+
+.program-create-modal {
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.program-create-modal .btn-row {
+  position: sticky;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, #ffffff 35%);
+  border-top: 1px solid #e4e8f0;
+}
+
+.msg {
+  min-height: 20px;
+  font-size: 13px;
+  margin-top: 8px;
+  color: #0a5;
+}
+
+pre {
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 10px;
+  border-radius: 6px;
+  overflow: auto;
+  min-height: 120px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .api-grid {
+    grid-template-columns: 1fr;
+  }
+}
